@@ -49,7 +49,7 @@
         </tr>
         <tr>
             <td>timePlaced</td>
-            <td>{{$exchange->timePlaced}}</td>
+            <td>{{strtoupper(Carbon\Carbon::parse($exchange->timePlaced)->format('d-M-y H:i:s'))}}</td>
         </tr>
         <tr>
             <td>originatingCountry</td>
