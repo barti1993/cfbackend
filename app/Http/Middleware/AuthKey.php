@@ -24,7 +24,7 @@ class AuthKey
             return response()->json(['message'=>'API key not found'], 401);
         }
         //If the token is incorrect
-        if($token != 'ABC'){
+        if($token != 'CFBACKENDTASK'){
             //Returns json response 401 (Unauthorized)
             return response()->json(['message'=>'Incorrect API key'], 401);
         }
