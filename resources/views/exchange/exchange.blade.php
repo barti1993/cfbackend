@@ -16,6 +16,9 @@
 </head>
 <body>
     <h1>List of exchanges request</h1>
+    @if(isset($exchanges))
+        <p>No exchange request found. You should POST something to the API Endpoint!</p> 
+    @else
     @foreach($exchanges as $exchange)
     <p>{{$exchange->id}}. Request created at {{$exchange->created_at}}</p> 
     <table>
@@ -58,5 +61,5 @@
     </table>
     </br>
     @endforeach
-  
+    @endif
 </body>
