@@ -86,9 +86,14 @@ class Exchange extends Controller
 
     public function capitalizeDateFormat($dateToCapitalize){
         $dateToCapitalize = explode('-',$dateToCapitalize);
-        $dateToCapitalize[1] = ucfirst(strtolower($dateToCapitalize[1]));
-        $dateToCapitalize = implode('-',$dateToCapitalize);
-        return $dateToCapitalize;
+        if(empty($dateToCapitalize[1])){            
+            return $dateToCapitalize;
+        }else{
+            $dateToCapitalize[1] = ucfirst(strtolower($dateToCapitalize[1]));
+            $dateToCapitalize = implode('-',$dateToCapitalize);
+            return $dateToCapitalize;
+        }
+        
     }
     
 
